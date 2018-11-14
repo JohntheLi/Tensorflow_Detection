@@ -1,5 +1,6 @@
 # ObjectDetection
-Object detection project for Codeology fall 2018
+Object Detection using Tensorflow that I worked on for Codeology 2018 under the guidance of [Micah Harrison](https://github.com/MicahHarrison).
+
 ## SETUP
 
 	- pip install tensorflow
@@ -14,3 +15,11 @@ Object detection project for Codeology fall 2018
 		(path to protoc.exe)
 	- From the object detection directory, run "jupyter notebook" and choose object_detection_tutorial.ipynb. 
 	- From there you should be able to run all cells and see the result on their test images.
+
+## Procedure
+1. Gather test images from a *Beautiful Soup*, a Python webscraper, and label using *labelImg*.
+2. Clean the test images to remove invalid file formats (.gif, .tiff, .bmp) and bad images. We also learned that images must be in RGB.
+3. Labeling the images created XML files, which were converted to .csv and then TFrecord files for Tensorflow to read.
+4. Use the Object-Detection model and train using our dataset.
+5. Test the trained model on test images.
+6. (Optional) Apply the model to a real-time video feed to analyze frame-by-frame.
